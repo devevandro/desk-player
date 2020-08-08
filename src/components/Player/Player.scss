@@ -1,0 +1,88 @@
+#disco {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 20px;
+  left: 120px;
+
+  img {
+    position: absolute;
+    width: 350px;
+  }
+}
+
+#musics {
+  position: relative;
+  height: 65vh;
+  width: 250px;
+  top: 20px;
+  right: -380px;
+  background-color: transparent;
+  overflow-y: scroll;
+
+  .music-card {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+
+    span {
+      position: relative;
+      color: #ffffff;
+    }
+
+    .qntd {
+      position: relative;
+      top: 22px;
+      left: 5px;
+    }
+
+    .name {
+      position: relative;
+      left: 35px;
+      font-weight: bold;
+    }
+
+    .artist {
+      top: 3px;
+      left: 35px;
+      font-size: 13px;
+      font-weight: normal;
+      opacity: .6;
+    }
+
+    .time {
+      position: relative;
+      justify-self: right;
+      text-align: right;
+      top: -25px;
+      font-size: 13px;
+      font-weight: normal;
+      opacity: .8;
+    }
+
+    .white-line {
+      position: relative;
+      top: -27px;
+      height: 5vh;
+      border-bottom: 1px solid #ffffff;
+      opacity: .3;
+    }
+  }
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#music-controls {
+  position: relative;
+  width: 100%;
+  height: 12vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  top: 35px;
+  left: 220px;
+  background-color: red;
+}

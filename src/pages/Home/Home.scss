@@ -1,0 +1,53 @@
+@import '../../shared/styles/colors';
+
+#main {
+
+    .controls {
+        position: absolute;
+        top: 12px;
+        right: -12px;
+
+        button {
+            width: 30%;
+            border: none;
+            outline: 0;
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+        img {
+            width: 80%;
+        }
+
+        .btn-minimize {
+            position: relative;
+            top: -3px;
+            margin-right: 5px;
+        }
+    }
+
+    .musics {
+        position: absolute;
+        width: 520px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        left: 35px;
+    }
+
+    .description {
+        position: relative;
+        direction: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        bottom: -535px;
+    
+        p {
+            font-size: 13px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+    }
+}
