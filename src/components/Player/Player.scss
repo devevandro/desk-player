@@ -74,6 +74,22 @@
     display: none;
 }
 
+.progress {
+  position: absolute;
+  top: 450px;
+  left: 125px;
+
+  span {
+    margin-right: 13px;
+    color: #ffffff;
+  }
+  
+  input {
+    position: relative;
+    top: 2px;
+  }
+}
+
 #music-controls {
   position: relative;
   width: 100%;
@@ -84,5 +100,19 @@
   align-items: center;
   top: 35px;
   left: 220px;
-  background-color: red;
+
+  button {
+    position: relative;
+    width: 80px;
+    border: none;
+    outline: 0;
+    background-color: transparent;
+    cursor: pointer;
+  }
+}
+
+#volume {
+  position: relative;
+  top:  -16px;
+  right: -480px;
 }

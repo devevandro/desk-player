@@ -1,6 +1,7 @@
 import React from 'react';
-import SideNav from '../../components/SideNav/SideNav.jsx';
-import Player from '../../components/Player/Player.jsx';
+import SideNav from '../../Components/SideNav/SideNav.jsx';
+import Player from '../../Components/Player/Player.jsx';
+import Radio from '../../Components/Radio/Radio.jsx';
 import './Home.scss';
 
 const Home = () => {
@@ -14,8 +15,12 @@ const Home = () => {
 
             <SideNav />
 
-            <div className="musics">
+            {/* <div className="musics">
                 <Player />
+            </div> */}
+
+            <div className="radiosStations">
+                <Radio />
             </div>
 
             <div className="description">

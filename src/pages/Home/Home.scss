@@ -42,6 +42,7 @@
         justify-content: center;
         align-items: center;
         text-align: center;
+        left: 60px;
         bottom: -535px;
     
         p {
@@ -49,5 +50,14 @@
             font-weight: 700;
             color: #ffffff;
         }
+    }
+
+    .radiosStations {
+        position: absolute;
+        width: 600px;
+        height: 1vh;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        left: 75px;
     }
 }

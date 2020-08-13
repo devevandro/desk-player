@@ -19,14 +19,23 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    top: 45px;
+    top: 55px;
     left: 0;
 
+    button {
+      height: 5vh;
+      border: none;
+      outline: 0;
+      cursor: pointer;
+      background-color: transparent;
+    }
+
+    button:nth-child(2) {
+      margin-top: 40px;
+    }
+
     .opacity {
-      
-      img, p {
         opacity: 0.3;
-      }
     }
 
     p {
@@ -39,16 +48,26 @@
     }
   }
 
-  button {
-    background-color: transparent;
-    border: none;
-    outline: 0;
-    cursor: pointer;
-  }
+  
 
   .select {
     position: relative;
+    height: 13vh;
     top: 80px;
+
+    button {
+      height: 5vh;
+      border: none;
+      outline: 0;
+      cursor: pointer;
+      background-color: transparent;
+    }
+
+    p {
+      position: relative;
+      top: -22px;
+      color: #ffffff;
+    }
   }
 
   .logo {

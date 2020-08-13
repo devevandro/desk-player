@@ -1,24 +1,42 @@
 import React from 'react';
+import RadioIcon from '@material-ui/icons/Radio';
+import MusicVideoIcon from '@material-ui/icons/MusicVideo';
+import PlaylistAddIcon from '@material-ui/icons/PlaylistAdd';
+import {makeStyles} from '@material-ui/core/styles';
 import './SideNav.scss';
 
 const SideNav = () => {
+    //código para moficar a cor dos icones
+    const useStyles = makeStyles((theme) => ({
+        root: {
+            '& > svg': {
+                margin: theme.spacing(2),
+            },
+        },
+    }));
+
+    function filesOpen() {
+        console.log('teste btn');
+    }
 
     return (<>
         <div id="left-side">
             <div className="icon-radio">
                 <button className="opacity">
-                    <img src="/assets/icons/music.png" alt="icone música" />
+                    <MusicVideoIcon style={{color: '#ffffff', fontSize: 30}} />
                     <p>Player</p>
                 </button>
 
-                <button>
-                    <img src="/assets/icons/radio.png" alt="icone música" />
+                <button className="opacity">
+                    <RadioIcon style={{color: "#ffffff", fontSize: 30}} />
                     <p>Rádio</p>
                 </button>
             </div>
 
             <div className="select">
-                <button type="button"><img src="/assets/icons/selecionar.png" alt="botão selecionar" /></button>
+                <input type="file" multiple style={{display: 'none'}} />
+                <button type="button" onClick={filesOpen}><PlaylistAddIcon style={{fontSize: 50, color: '#ffffff'}} /></button>
+                <p>Nova Lista</p>
             </div>
 
             <div className="logo">
