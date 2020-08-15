@@ -7,8 +7,8 @@ let window;
 
 app.on('ready', () => {
     window = new BrowserWindow({
-        width: 900,
-        height: 600,
+        width: 1000,
+        height: 640,
         transparent: true,
         frame: false,
         webPreferences: {

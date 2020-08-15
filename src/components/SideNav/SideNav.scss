@@ -7,71 +7,27 @@
   justify-content: center;
   align-items: center;
   width: 130px;
-  height: 600px;
+  height: 640px;
   top: 0;
   left: 0;
   bottom: 0;
   background-color: $background;
 
-  .icon-radio {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    top: 55px;
-    left: 0;
-
-    button {
-      height: 5vh;
-      border: none;
-      outline: 0;
-      cursor: pointer;
-      background-color: transparent;
-    }
-
-    button:nth-child(2) {
-      margin-top: 40px;
-    }
-
-    .opacity {
-        opacity: 0.3;
-    }
-
-    p {
-      position: relative;
-      top: -45px;
-      left: 55px;
-      font-size: 18px;
-      font-size: 700;
-      color: #ffffff;
-    }
-  }
-
-  
-
-  .select {
-    position: relative;
-    height: 13vh;
-    top: 80px;
-
-    button {
-      height: 5vh;
-      border: none;
-      outline: 0;
-      cursor: pointer;
-      background-color: transparent;
-    }
-
-    p {
-      position: relative;
-      top: -22px;
-      color: #ffffff;
-    }
-  }
-
   .logo {
-    position: relative;
-    top: 195px;
+    position: absolute;
+    bottom: 5px;
+
+    img {
+      width: 80px;
+    }
+
+    p {
+      font-family: 'Yanone Kaffeesatz', sans-serif;
+      position: relative;
+      margin-top: -1px;
+      font-size: 22px;
+      font-weight: 500;
+      color: #ffffff;
+    }
   }
 }

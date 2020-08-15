@@ -1,0 +1,25 @@
+#pagination {
+    position: absolute;
+    ; 
+    top: 13px;
+    left: 110px;
+    padding: 5px;
+    cursor: pointer;
+
+    nav {
+        ul {
+            li {
+                padding: 3px;
+                display: inline;
+
+                a {
+                    font-size: 12px;
+                    text-decoration: none;/* 
+                    padding: 3px;
+                    border: 1px solid #ffffff; */
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}
