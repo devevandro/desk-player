@@ -4,7 +4,10 @@
   "description": "Desktop player",
   "author": "Evandro Carvalho Ferreira",
   "build": {
-    "appId": "desk.sounds"
+    "appId": "desk.sounds",
+    "win": {
+      "icon": "public/assets/icons/icon.png"
+    }
   },
   "main": "public/electron.js",
   "homepage": "./",
@@ -23,6 +26,7 @@
     "react": "^16.13.1",
     "react-audio-player": "^0.13.0",
     "react-dom": "^16.13.1",
+    "react-hls-player": "^1.1.0",
     "react-scripts": "3.4.1"
   },
   "scripts": {

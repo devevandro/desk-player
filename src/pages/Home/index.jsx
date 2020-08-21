@@ -1,23 +1,69 @@
-import React, { useState } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import SideNav from '../../Components/SideNav/SideNav.jsx';
 import Player from '../../Components/Player/Player.jsx';
 import Radio from '../../Components/Radio/Radio.jsx';
 import RadioIcon from '@material-ui/icons/Radio';
 import MusicVideoIcon from '@material-ui/icons/MusicVideo';
+import Tabs from "@material-ui/core/Tabs";
+import Tab from '@material-ui/core/Tab';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
 import { makeStyles } from '@material-ui/core/styles';
 import './Home.scss';
 
-const Home = () => {
-    const [selected, setSelected] = useState(0);
+function TabPanel(props) {
+    const { children, value, index, ...other } = props;
 
-    //código para moficar a cor dos icones
-    const useStyles = makeStyles((theme) => ({
-        root: {
-            '& > svg': {
-                margin: theme.spacing(2),
-            },
+    return (
+        <div
+            role="tabpanel"
+            hidden={value !== index}
+            id={`vertical-tabpanel-${index}`}
+            aria-labelledby={`vertical-tab-${index}`}
+            {...other}>
+            {value === index && (
+                <Box p={2} style={{border: 'none'}}>
+                    <Typography>{children}</Typography>
+                </Box>
+            )}
+        </div>
+    );
+}
+
+function a11yProps(index) {
+    return {
+        id: `vertical-tab-${index}`,
+        'aria-controls': `vertical-tabpanel-${index}`,
+    };
+}
+
+//código para moficar a cor dos icones
+const useStyles = makeStyles((theme) => ({
+    root: {
+        flexGrow: 1,
+        backgroundColor: 'transparent',
+        color: 'white',
+        position: 'relative',
+        display: 'flex',
+        width: 450,
+        height: 300,
+        top: 50,
+        zIndex: 1,
+
+        '& > svg': {
+            margin: theme.spacing(2),
         },
-    }));
+    },
+}));
+
+const Home = () => {
+    const classes = useStyles();
+    const [value, setValue] = React.useState(0);
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
 
     return (<>
         <div id="main">
@@ -28,30 +74,20 @@ const Home = () => {
 
             <SideNav />
 
-            <div id="btn-choose">
-                <div className="icon-musics">
-                    <MusicVideoIcon style={{ color: '#ffffff', fontSize: 30 }} />
-                    <button onClick={() => setSelected(1)}>Player</button>
-                </div>
+            <div className={classes.root}>
+                <Tabs indicatorColor='transparent' orientation="vertical" variant="scrollable" value={value} onChange={handleChange} aria-label="Vertical tabs example" className={classes.tabs}>
+                    <Tab icon={<MusicVideoIcon  style={{position: 'absolute', top: '26px', left: '15px'}} />} label="Player" {...a11yProps(1)} />
+                    <Tab icon={<RadioIcon style={{position: 'absolute', top: '23px', left: '16px'}} />} label="Rádio" {...a11yProps(0)} />
+                </Tabs>
 
-                <div className="icon-radio">
-                    <RadioIcon style={{ color: "#ffffff", fontSize: 30 }} />
-                    <button onClick={() => setSelected(2)}>Rádio</button>
-                </div>
+                <TabPanel value={value} index={1}>
+                    <Radio />
+                </TabPanel>
+
+                <TabPanel value={value} index={0}>
+                    <Player />
+                </TabPanel>
             </div>
-
-            {selected != 0 && <>
-                {selected === 1 && <>
-                    <div className="musics">
-                        <Player />
-                    </div>
-                </> || selected === 2 && <>
-                    <div className="radiosStations">
-                        <Radio />
-                    </div>
-                </> || selected === 3 && <>
-                </>}
-            </>}
 
             <div className="description">
                 <p>Powered by ElectronJS and ReactJS</p>
@@ -59,5 +95,12 @@ const Home = () => {
         </div>
     </>);
 }
+
+
+TabPanel.propTypes = {
+    children: PropTypes.node,
+    index: PropTypes.any.isRequired,
+    value: PropTypes.any.isRequired,
+};
 
 export default Home;

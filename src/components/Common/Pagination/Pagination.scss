@@ -1,8 +1,7 @@
 #pagination {
     position: absolute;
-    ; 
-    top: 13px;
-    left: 110px;
+    top: -25px;
+    left: 8px;
     padding: 5px;
     cursor: pointer;
 
@@ -14,12 +13,17 @@
 
                 a {
                     font-size: 12px;
-                    text-decoration: none;/* 
-                    padding: 3px;
-                    border: 1px solid #ffffff; */
-                    color: #ffffff;
+                    text-decoration: none;
                 }
             }
         }
+    }
+
+    .total {
+        color: #ffffff;
+    }
+
+    .atual {
+        color: #558686;
     }
 }

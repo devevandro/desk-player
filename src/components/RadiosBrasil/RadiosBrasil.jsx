@@ -7,9 +7,8 @@ import './RadiosBrasil.scss';
 const RadiosBrasil = () => {
     const [cuurrentPage, setCurrentPage] = useState(1);
     const [radiosPerPage] = useState(16);
-    const [sertanejo, setSertanejo] = useState([]);
-    const [radio, setRadio] = useState([]);
     const [radioStaion, setRadioStation] = useState([]);
+    console.log('página atual: ', cuurrentPage);
 
     useEffect(() => {
         function getMusics() {
@@ -41,7 +40,7 @@ const RadiosBrasil = () => {
         </div>
 
         <div className="pagination">
-            <Pagination radiosPerPage={radiosPerPage} totalRadios={radioStaion.length} paginate={paginate} />
+            <Pagination currentPage={cuurrentPage} radiosPerPage={radiosPerPage} totalRadios={radioStaion.length} paginate={paginate} />
         </div>
     </>);
 };
