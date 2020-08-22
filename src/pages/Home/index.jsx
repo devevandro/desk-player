@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import SideNav from '../../Components/SideNav/SideNav.jsx';
 import Player from '../../Components/Player/Player.jsx';
@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Home = () => {
     const classes = useStyles();
-    const [value, setValue] = React.useState(0);
+    const [value, setValue] = useState(0);
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -87,10 +87,6 @@ const Home = () => {
                 <TabPanel value={value} index={0}>
                     <Player />
                 </TabPanel>
-            </div>
-
-            <div className="description">
-                <p>Powered by ElectronJS and ReactJS</p>
             </div>
         </div>
     </>);

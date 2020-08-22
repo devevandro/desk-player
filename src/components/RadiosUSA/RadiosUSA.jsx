@@ -2,33 +2,35 @@ import React, { useState, useEffect } from 'react';
 import RadioBrowser from 'radio-browser';
 import RadiosCard from '../Common/RadiosCard/RadiosCard';
 import Pagination from '../Common/Pagination/Pagination';
-import './RadiosRap.scss';
+import './RadiosUSA.scss';
 
-const RadiosBrasil = () => {
+const RadiosUSA = () => {
     const [cuurrentPage, setCurrentPage] = useState(1);
     const [radiosPerPage] = useState(16);
-    const [radiosRap, setRadiosRap] = useState([]);
+    const [radioStaion, setRadioStation] = useState([]);
+    console.log('página atual: ', cuurrentPage);
 
-    //radios de rap
     useEffect(() => {
-        function getRapRadios() {
+        function getMusics() {
             let filters = {
-                by: 'tag',
-                searchterm: 'rap'
+                limit: 588,
+                by: 'country',
+                searchterm: 'United State'
             };
 
             RadioBrowser.getStations((filters)).then((data) => {
-                setRadiosRap(data);
+                setRadioStation(data);
+                console.log(data);
             }).catch(error => console.log(error));
-        };
+        }
 
-        getRapRadios();
+        getMusics();
     }, []);
 
     /*pegando as radioss atuais*/
     const indexOfLastRadio = cuurrentPage * radiosPerPage;
     const indexOfFirstRadio = indexOfLastRadio - radiosPerPage;
-    const currentRadios = radiosRap.slice(indexOfFirstRadio, indexOfLastRadio);
+    const currentRadios = radioStaion.slice(indexOfFirstRadio, indexOfLastRadio);
 
     /*mudando a página*/
     const paginate = pageNumber => setCurrentPage(pageNumber);
@@ -39,9 +41,9 @@ const RadiosBrasil = () => {
         </div>
 
         <div className="pagination">
-            <Pagination radiosPerPage={radiosPerPage} totalRadios={radiosRap.length} paginate={paginate} />
+            <Pagination currentPage={cuurrentPage} radiosPerPage={radiosPerPage} totalRadios={radioStaion.length} paginate={paginate} />
         </div>
     </>);
 };
 
-export default RadiosBrasil;
+export default RadiosUSA;

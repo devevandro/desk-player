@@ -45,20 +45,4 @@
         grid-template-columns: repeat(3, 1fr);
         left: 75px;
     }
-
-    .description {
-        position: relative;
-        direction: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        left: 314px;
-        bottom: -280px;
-    
-        p {
-            font-size: 13px;
-            font-weight: 700;
-            color: #ffffff;
-        }
-    }
 }

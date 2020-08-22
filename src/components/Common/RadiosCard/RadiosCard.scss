@@ -7,8 +7,9 @@
     align-items: center;
     width: 100px;
     height: 90vh;
-    top: -50px;
-    left: -35px;
+    top: -37px;
+    left: -353px;
+    z-index: 1;
 
     .radios-description {
         display: flex;
@@ -31,7 +32,7 @@
         span {
             img {
                 width: 30px;
-                border-radius: 50px;
+                border-radius: 80px;
             }
 
             p {

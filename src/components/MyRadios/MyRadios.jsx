@@ -3,7 +3,7 @@ import RadiosCard from '../Common/RadiosCard/RadiosCard';
 import Pagination from '../Common/Pagination/Pagination';
 import './MyRadios.scss';
 
-const RadiosBrasil = () => {
+const MyRadios = () => {
     const [cuurrentPage, setCurrentPage] = useState(1);
     const [radiosPerPage] = useState(16);
     const [radio, setRadio] = useState([]);
@@ -40,10 +40,10 @@ const RadiosBrasil = () => {
                     favicon: "/assets/radios/integracao.png"
                 },
                 {
-                    name: "Geração Hip-Hop Brasil",
+                    name: "Rádio Evangelizar",
                     prefixo: "00",
-                    url_resolved: "https://srv3.geracaoradios.com/radio/8030/radio?1596417040399",
-                    favicon: "/assets/radios/geracao-hip-hop.jpg"
+                    url_resolved: "https://shout87.crossradio.com.br:18000/stream/1;",
+                    favicon: "/assets/radios/evangelizar.png"
                 },
 
                 {
@@ -148,4 +148,4 @@ const RadiosBrasil = () => {
     </>);
 };
 
-export default RadiosBrasil;
+export default MyRadios;
