@@ -1,4 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import Dropzone from 'react-dropzone';
+import * as mm from 'music-metadata';
+import * as musicMetadata from 'music-metadata-browser';
 import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
 import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';/* 
 import PauseCircleOutlineIcon from './node_modules/@material-ui/icons/PauseCircleOutline'; */
@@ -32,10 +35,31 @@ const Player = () => {
     const classes = useStyles();
     const classe = useStylesVolume();
     const [value, setValue] = useState(30);
+    const [file, setFile] = useState([]);
+    const [teste, setTeste] = useState([]);
+
+    useEffect(() => {
+        file.map(el => {
+            musicMetadata.parseBlob(el).then(metadata => {
+                setTeste(metadata.common.title);
+                console.log("\n get:", metadata.common.title, "\n", metadata.common.artist, "\n", secondsToTime(metadata.format.duration));
+            });
+        })
+    }, [file]);
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
+
+    //convet time music
+    function padZero(v) {
+        return (v < 10) ? "0" + v : v;
+    }
+
+    //convet time music
+    function secondsToTime(t) {
+        return padZero(parseInt((t / (60)) % 60)) + ":" + padZero(parseInt((t) % 60));
+    }
 
     return (<>
         <div id="disco">
@@ -43,24 +67,39 @@ const Player = () => {
         </div>
 
         {<div id="musics">
-            {/* {
-                musica.map((el, i) => {
+            <Dropzone multiple={true} accept={["audio/*"]} onDrop={(files) => { setFile(files) }}>
+                {({ getRootProps, getInputProps }) => (
+                    <div className="container">
+                        <div
+                            {...getRootProps({
+                                className: 'dropzone',
+                                onDrop: event => event.stopPropagation()
+                            })}
+                        >
+                            <input {...getInputProps()} />
+                            <p>Clique ou arraste suas musicas aqui</p>
+                        </div>
+                    </div>
+                )}
+            </Dropzone>
+
+            {
+                file.map((el, i) => {
                     return <>
                         <div className="music-card">
                             <span className="qntd">{++i}</span>
-                            <span className="name">{el.nome}</span>
-                            <span className="artist">{el.artista}</span>
-                            <span className="time">{el.time}</span>
-                            <div className="white-line"></div>
+                            <ul>
+                                <li>{teste}</li>
+                            </ul>
                         </div>
                     </>
                 })
-            } */}
+            }
         </div>}
 
         <div className="progress">
             <span id="time-left">00:00</span>
-            <input type="range" name="" id=""/>
+            <input type="range" name="" id="" />
         </div>
 
         <div id="music-controls">
@@ -75,13 +114,13 @@ const Player = () => {
             <div className={classe.root}>
                 <Grid container spacing={2}>
                     <Grid item>
-                        <VolumeDown style={{color: '#ffffff'}}/>
+                        <VolumeDown style={{ color: '#ffffff' }} />
                     </Grid>
                     <Grid item xs>
-                        <Slider value={value} onChange={handleChange} aria-labelledby="continuous-slider" style={{color: '#ffffff'}} />
+                        <Slider value={value} onChange={handleChange} aria-labelledby="continuous-slider" style={{ color: '#ffffff' }} />
                     </Grid>
                     <Grid item>
-                        <VolumeUp style={{color: '#ffffff'}} />
+                        <VolumeUp style={{ color: '#ffffff' }} />
                     </Grid>
                 </Grid>
             </div>

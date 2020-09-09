@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
         color: 'white',
         position: 'relative',
         display: 'flex',
-        width: 450,
+        width: 430,
         height: 300,
         top: 50,
         zIndex: 1,

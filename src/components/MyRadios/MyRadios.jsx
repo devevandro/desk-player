@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import RadiosCard from '../Common/RadiosCard/RadiosCard';
-import Pagination from '../Common/Pagination/Pagination';
+import Paginate from '../Common/Pagination/Paginate';
 import './MyRadios.scss';
 
 const MyRadios = () => {
-    const [cuurrentPage, setCurrentPage] = useState(1);
-    const [radiosPerPage] = useState(16);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [radiosPerPage] = useState(9);
     const [radio, setRadio] = useState([]);
 
     //minhas rádios preferidas
@@ -13,10 +13,9 @@ const MyRadios = () => {
         function getRadiosLocale() {
             const radios = [
                 {
-                    name: "Generations Hip Hop Soul Radio",
-                    prefixo: "00,0",
-                    url_resolved: "https://gene-wr08.ice.infomaniak.ch/gene-wr08.mp3",
-                    favicon: "/assets/radios/hip-hop-soul.jpg"
+                    name: "105 FM",
+                    url_resolved: "https://digitalpay1.app:9019/live",
+                    favicon: "/assets/radios/hip-hop-105-fm.png"
                 },
 
                 {
@@ -35,10 +34,16 @@ const MyRadios = () => {
 
                 {
                     name: "Integração FM",
-                    prefixo: "105.1",
-                    url_resolved: "https://sslplayer.reverso.srv.br/proxy/7816/;?1596640058988",
-                    favicon: "/assets/radios/integracao.png"
+                    url_resolved: "https://ssl.stm-ip.com/proxy/7816/;?1598757855865"
                 },
+
+                {
+                    name: "Vale do Sol FM",
+                    prefixo: "103.33",
+                    url_resolved: "https://cantador.app:9097/live?1598368048631",
+                    favicon: "/assets/radios/voz-do-vale.png"
+                },
+
                 {
                     name: "Rádio Evangelizar",
                     prefixo: "00",
@@ -117,6 +122,13 @@ const MyRadios = () => {
                 },
 
                 {
+                    name: "Rádio Escuta - FM",
+                    prefixo: "100.5",
+                    url_resolved: "http://s69.tecinfinity.com.br:7864/stream?1598542440840",
+                    favicon: "/assets/radios/escuta-fm.jpg"
+                },
+
+                {
                     name: "Rádio Rap Nacional",
                     prefixo: "100.5",
                     url_resolved: "http://node-17.zeno.fm/spzru5axm8quv?rj-ttl=5&rj-tok=AAABc_J2iqAAsB7n7uHuQJG-PA",
@@ -130,20 +142,19 @@ const MyRadios = () => {
     }, []);
 
     /*pegando as radioss atuais*/
-    const indexOfLastRadio = cuurrentPage * radiosPerPage;
+    const indexOfLastRadio = currentPage * radiosPerPage;
     const indexOfFirstRadio = indexOfLastRadio - radiosPerPage;
     const currentRadios = radio.slice(indexOfFirstRadio, indexOfLastRadio);
-
-    /*mudando a página*/
-    const paginate = pageNumber => setCurrentPage(pageNumber);
+    const howManyPages = Math.ceil(radio.length/radiosPerPage);
 
     return (<>
         <div className="radios">
-            <RadiosCard radios={currentRadios} />
+            <RadiosCard radios={currentRadios} icone={'diversos'} />
         </div>
 
         <div className="pagination">
-            <Pagination radiosPerPage={radiosPerPage} totalRadios={radio.length} paginate={paginate} />
+            <Paginate pages = {howManyPages} setCurrentPage={setCurrentPage} />
+            {/* <Pagination currentPage={currentPage} radiosPerPage={radiosPerPage} totalRadios={radio.length} paginate={paginate} /> */}
         </div>
     </>);
 };

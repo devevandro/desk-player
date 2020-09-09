@@ -14,4 +14,9 @@ $(document).ready(() => {
         console.log('fechar');
         remote.BrowserWindow.getFocusedWindow().close();
     });
+
+
+    $('.radios-cards').click(() => {
+        console.log('side nav');
+    });
 });

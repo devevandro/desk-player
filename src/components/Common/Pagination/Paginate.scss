@@ -1,0 +1,43 @@
+#pagination-container {
+    position: fixed;
+    top: 606px;
+    left: 518px;
+
+    a {
+        margin: 0 8px;
+        font-size: 12px;
+        text-decoration: none;
+        color: #558686;
+    }
+
+    .disabled {
+        opacity: .9;
+        cursor: not-allowed;
+    }
+
+    .active {
+        color: #ffffff;
+    }
+}
+
+#pagination-container-max {
+    position: fixed;
+    top: 606px;
+    left: 470px;
+
+    a {
+        margin: 0 8px;
+        font-size: 12px;
+        text-decoration: none;
+        color: #558686;
+    }
+
+    .disabled {
+        opacity: .9;
+        cursor: not-allowed;
+    }
+
+    .active {
+        color: #ffffff;
+    }
+}

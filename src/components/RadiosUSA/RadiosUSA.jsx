@@ -1,19 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import RadioBrowser from 'radio-browser';
 import RadiosCard from '../Common/RadiosCard/RadiosCard';
-import Pagination from '../Common/Pagination/Pagination';
+import Paginate from '../Common/Pagination/Paginate';
 import './RadiosUSA.scss';
 
 const RadiosUSA = () => {
     const [cuurrentPage, setCurrentPage] = useState(1);
     const [radiosPerPage] = useState(16);
-    const [radioStaion, setRadioStation] = useState([]);
+    const [radioStation, setRadioStation] = useState([]);
     console.log('página atual: ', cuurrentPage);
 
     useEffect(() => {
         function getMusics() {
             let filters = {
-                limit: 588,
                 by: 'country',
                 searchterm: 'United State'
             };
@@ -30,20 +29,17 @@ const RadiosUSA = () => {
     /*pegando as radioss atuais*/
     const indexOfLastRadio = cuurrentPage * radiosPerPage;
     const indexOfFirstRadio = indexOfLastRadio - radiosPerPage;
-    const currentRadios = radioStaion.slice(indexOfFirstRadio, indexOfLastRadio);
-
-    /*mudando a página*/
-    const paginate = pageNumber => setCurrentPage(pageNumber);
+    const currentRadios = radioStation.slice(indexOfFirstRadio, indexOfLastRadio);
+    const howManyPages = Math.ceil(radioStation.length / radiosPerPage);
 
     return (<>
         <div className="radios">
-            <RadiosCard radios={currentRadios} />
+            <RadiosCard radios={currentRadios} icone={'usa'}/>
         </div>
 
         <div className="pagination">
-            <Pagination currentPage={cuurrentPage} radiosPerPage={radiosPerPage} totalRadios={radioStaion.length} paginate={paginate} />
+            <Paginate pages={howManyPages} setCurrentPage={setCurrentPage} />
         </div>
     </>);
 };
-
 export default RadiosUSA;
