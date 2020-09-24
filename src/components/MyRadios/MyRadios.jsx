@@ -108,7 +108,7 @@ const MyRadios = () => {
                 },
 
                 {
-                    "name": "Paiquerê FM",
+                    "name": "Paiquerê FM - Londrina",
                     "prefixo": "98.9",
                     "url_resolved": "http://stm01.virtualcast.com.br:8294/live",
                     "favicon": "/assets/radios/paiquere-fm.png"
@@ -122,9 +122,30 @@ const MyRadios = () => {
                 },
 
                 {
-                    name: "Rádio Escuta - FM",
+                    name: "Rádio Escuta - Assis",
                     prefixo: "100.5",
                     url_resolved: "http://s69.tecinfinity.com.br:7864/stream?1598542440840",
+                    favicon: "/assets/radios/escuta-fm.jpg"
+                },
+
+                {
+                    name: "Rádio Pajuçara - Maceió",
+                    prefixo: "100.5",
+                    url_resolved: "https://slrp.sambavideos.sambatech.com/radio/pajucara4_7fbed8aac5d5d915877e6ec61e3cf0db/livestream/chunklist.m3u8",
+                    favicon: "/assets/radios/escuta-fm.jpg"
+                },
+
+                {
+                    name: "Rádio Nova 105 - Amapá",
+                    prefixo: "100.5",
+                    url_resolved: "http://sv12.hdradios.net:7070/live",
+                    favicon: "/assets/radios/escuta-fm.jpg"
+                },
+
+                {
+                    name: "Rádio Ocidental FM - Acre",
+                    prefixo: "100.5",
+                    url_resolved: "http://stream.helplay.com.br:8003/stream",
                     favicon: "/assets/radios/escuta-fm.jpg"
                 },
 

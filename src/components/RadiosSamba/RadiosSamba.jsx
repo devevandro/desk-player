@@ -23,8 +23,8 @@ const RadiosSamba = () => {
                 },
 
                 {
-                    name: "Rádio Web Pagodão Baiano",
-                    url_resolved: "http://streaming.center.srv.br:9302/;stream.nsv"
+                    name: "Rádio Paredão Pagodão",
+                    url_resolved: "https://node-23.zeno.fm/3vwwc66wm8quv?rj-ttl=5&rj-tok=AAABdJG4maIAhvKxEfwJjk2gxA"
                 },
 
                 {
