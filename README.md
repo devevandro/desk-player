@@ -4,7 +4,7 @@ This project was created by Electron JS and React JS.
 In the project directory, you can run:
 
 ### `project in production`
-- npm start or npm run dev - the project will start port 3000
+- ### npm start or npm run dev - the project will start port 3000
 - npm run build create a installer to project
 
 ### `install project`
