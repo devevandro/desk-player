@@ -27,15 +27,10 @@ const RadioMusicCard = ({ radios, icone }) => {
                         <div key={index} className="radios-description">
                             <div className="radios-cards">
                                 {(icone === 'rap') && <img src={'assets/icons/rap.png'} /> }
-                                {/* {(icone === 'rap') && <img src={'build/assets/icons/rap.png'} /> } */}
                                 {(icone === 'samba') && <img src={'assets/icons/cavaquinho.png'} /> }
-                                {/* {(icone === 'samba') && <img src={'build/assets/icons/cavaquinho.png'} /> } */}
                                 {(icone === 'brasil') && <img src={'assets/icons/brasil.png'} /> }
-                                {/* {(icone === 'brasil') && <img src={'build/assets/icons/brasil.png'} /> } */}
                                 {(icone === 'sertanejo') && <img src={'assets/icons/sertanejo.png'} /> }
-                                {/* {(icone === 'sertanejo') && <img src={'build/assets/icons/sertanejo.png'} /> } */}
                                 {(icone === 'usa') && <img src={'assets/icons/usa.png'} /> }
-                                {/* {(icone === 'usa') && <img src={'build/assets/icons/usa.png'} /> } */}
                                 {(icone === 'diversos') && <RadioIcon /> }
                                 <p>{el.name}</p>
                                 {
