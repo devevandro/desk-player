@@ -9,4 +9,4 @@ In the project directory, you can run:
 npm start or npm run dev - the project will start port 3000
 
 ### `install project`
-in folder dist is the installer click and desk-sound to install de project in your machine
+in folder dist is the installer click in desk-sound to install de project in your machine
