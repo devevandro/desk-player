@@ -69,7 +69,9 @@ const Home = () => {
         <div id="main">
             <div className="controls">
                 <button className="btn-minimize"><img src="/assets/icons/icon-minus.png" alt="" /></button>
-                <button className="btn-close"><img src="/assets/icons/icon-close.png" alt="" /></button>
+                <button className="btn-close"><img src="/assets/icons/icon-close.png" alt="" /></button>{/* 
+                <button className="btn-minimize"><img src="build/assets/icons/icon-minus.png" alt="" /></button>
+                <button className="btn-close"><img src="build/assets/icons/icon-close.png" alt="" /></button> */}
             </div>
 
             <SideNav />

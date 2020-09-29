@@ -7,7 +7,9 @@ const SideNav = () => {
         <div id="left-side">
             <div className="logo">
                 <img src="/assets/icons/auto-falante.png" alt="logo aplicação" />
+                {/* <img src="build/assets/icons/auto-falante.png" alt="logo aplicação" /> */}
                 <p>DeskSounds</p>
+                <span className="descript">By React & Electron JS</span>
             </div>
         </div>
     </>);

@@ -1,12 +1,12 @@
 import React, { useState, useEffect, createRef } from 'react';
 import ReactAudioPlayer from 'react-audio-player';
-import ReactHlsPlayer from 'react-hls-player';
-import SearchIcon from '@material-ui/icons/Search';
+import ReactHlsPlayer from 'react-hls-player';/* 
+import SearchIcon from '@material-ui/icons/Search'; */
 import RadioIcon from '@material-ui/icons/Radio';
 import './RadiosCard.scss';
 
 const RadioMusicCard = ({ radios, icone }) => {
-    const [search, setSearch] = useState('');
+    const [search] = useState('');
     const [filteredRadios, setFilteredRadios] = useState([]);
     const testeRef = createRef();
     console.log('ref: ', testeRef);
@@ -26,11 +26,16 @@ const RadioMusicCard = ({ radios, icone }) => {
                     return <>
                         <div key={index} className="radios-description">
                             <div className="radios-cards">
-                                {(icone === 'rap') && <img src={'/assets/icons/rap.png'} /> }
-                                {(icone === 'samba') && <img src={'/assets/icons/cavaquinho.png'} /> }
-                                {(icone === 'brasil') && <img src={'/assets/icons/brasil.png'} /> }
-                                {(icone === 'sertanejo') && <img src={'/assets/icons/sertanejo.png'} /> }
-                                {(icone === 'usa') && <img src={'/assets/icons/usa.png'} /> }
+                                {(icone === 'rap') && <img src={'assets/icons/rap.png'} /> }
+                                {/* {(icone === 'rap') && <img src={'build/assets/icons/rap.png'} /> } */}
+                                {(icone === 'samba') && <img src={'assets/icons/cavaquinho.png'} /> }
+                                {/* {(icone === 'samba') && <img src={'build/assets/icons/cavaquinho.png'} /> } */}
+                                {(icone === 'brasil') && <img src={'assets/icons/brasil.png'} /> }
+                                {/* {(icone === 'brasil') && <img src={'build/assets/icons/brasil.png'} /> } */}
+                                {(icone === 'sertanejo') && <img src={'assets/icons/sertanejo.png'} /> }
+                                {/* {(icone === 'sertanejo') && <img src={'build/assets/icons/sertanejo.png'} /> } */}
+                                {(icone === 'usa') && <img src={'assets/icons/usa.png'} /> }
+                                {/* {(icone === 'usa') && <img src={'build/assets/icons/usa.png'} /> } */}
                                 {(icone === 'diversos') && <RadioIcon /> }
                                 <p>{el.name}</p>
                                 {

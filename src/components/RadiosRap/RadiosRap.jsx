@@ -45,36 +45,31 @@ const RadiosRap = () => {
 
                 {
                     name: "Rádio Geração Hip Hop",
-                    url_resolved: "http://srv3.geracaoradios.com:8030/radio.mp3/;",
-                    favicon: "/assets/radios/geracao.png"
+                    url_resolved: "http://srv3.geracaoradios.com:8030/radio.mp3/;"
                 },
 
                 {
                     "name": "Rádio Studio Souto - Rap Nacional",
-                    "url_resolved": "http://192.99.150.31:8377/stream",
-                    "favicon": "/assets/radios/studio.png"
+                    "url_resolved": "http://192.99.150.31:8377/stream"
                 },
 
                 {
                     "name": "Rádio Rap a Voz do Gueto",
-                    "url_resolved": "https://node-20.zeno.fm/zxxg927e32quv?rj-ttl=5&rj-tok=AAABdDaIRl0AToaktbu64bH4rg",
-                    "favicon": "/assets/radios/radio-gueto.png"
+                    "url_resolved": "https://node-20.zeno.fm/zxxg927e32quv?rj-ttl=5&rj-tok=AAABdDaIRl0AToaktbu64bH4rg"
                 },
 
                 {
                     "name": "Som Web Rap",
-                    "url_resolved": "https://node-07.zeno.fm/fc7w1wgg0xquv?rj-ttl=5&rj-tok=AAABdDaLPhwAV7Cy3rZVPIvcLA",
-                    "favicon": "/assets/radios/web-rap.png"
+                    "url_resolved": "https://node-07.zeno.fm/fc7w1wgg0xquv?rj-ttl=5&rj-tok=AAABdDaLPhwAV7Cy3rZVPIvcLA"
                 },
 
                 {
-                    name: "Rádio Black Sampa",
-                    url_resolved: "http://hts04.kshost.com.br:9494/live"
+                    "name": "Rádio Black Sampa",
+                    "url_resolved": "http://hts04.kshost.com.br:9494/live"
                 },
 
                 {
-                    name: "Rádio Rap Nacional",
-                    prefixo: "100.5",
+                    "name": "Rádio Rap Nacional",
                     url_resolved: "http://node-17.zeno.fm/spzru5axm8quv?rj-ttl=5&rj-tok=AAABc_J2iqAAsB7n7uHuQJG-PA"
                 },
 
@@ -142,7 +137,6 @@ const RadiosRap = () => {
 
         <div className="pagination">
             <Paginate pages={howManyPages} setCurrentPage={setCurrentPage} />
-            {/* <Pagination currentPage={currentPage} radiosPerPage={radiosPerPage} totalRadios={radio.length} paginate={paginate} /> */}
         </div>
     </>);
 };

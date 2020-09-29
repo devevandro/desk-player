@@ -70,11 +70,12 @@ const Paginate = ({ pages, setCurrentPage, max }) => {
   return (<>
     {(pages === 1) ? '' : <div id={(max === 'max') ? "pagination-container-max" : "pagination-container"}>
       <a
+        id="teste"
         href="#"
         className={`${currentButton === 1 ? 'disabled' : ''}`}
         onClick={() => setCurrentButton(prev => prev <= 1 ? prev : prev - 1)}
       >
-        {`${'<-'}`}
+        {`${'-'}`}
       </a>
 
       {arrOfCurrButtons.map(((item, index) => {
@@ -89,11 +90,12 @@ const Paginate = ({ pages, setCurrentPage, max }) => {
       }))}
 
       <a
+        id="teste"
         href="#"
         className={`${currentButton === numberOfPages.length ? 'disabled' : ''}`}
         onClick={() => setCurrentButton(prev => prev >= numberOfPages.length ? prev : prev + 1)}
       >
-        {`${'->'}`}
+        {`${'+'}`}
       </a>
     </div>}
   </>);

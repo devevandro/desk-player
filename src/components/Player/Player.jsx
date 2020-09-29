@@ -64,6 +64,7 @@ const Player = () => {
     return (<>
         <div id="disco">
             <img src="/assets/icons/disc.png" alt="" />
+            {/* <img src="build/assets/icons/disc.png" alt="" /> */}
         </div>
 
         {<div id="musics">

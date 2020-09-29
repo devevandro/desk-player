@@ -7,7 +7,7 @@ let window;
 
 app.on('ready', () => {
     window = new BrowserWindow({
-        width: 1000,
+        width: 1050,
         height: 640,
         transparent: true,
         frame: false,
@@ -18,6 +18,6 @@ app.on('ready', () => {
     });
 
     window.loadURL(
-        isDev ? "http://localhost:3000" : `file://${path.join(__dirname, "../buid/index.html")}`
+        isDev ? "http://localhost:3000" : `file://${path.join(__dirname, "../build/index.html")}`
     );
 });

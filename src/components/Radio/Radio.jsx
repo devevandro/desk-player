@@ -11,6 +11,7 @@ import MyRadios from '../MyRadios/MyRadios.jsx';
 import RadiosRap from '../RadiosRap/RadiosRap.jsx';
 import RadiosSamba from '../RadiosSamba/RadiosSamba.jsx';
 import RadioSertanejo from '../RadioSertanejo/RadioSertanejo.jsx';
+import RadioUSA from '../RadiosUSA/RadiosUSA.jsx';
 import './Radio.scss';
 
 function TabPanel(props) {
@@ -63,29 +64,33 @@ const Radio = () => {
     return (<>
         <div id="radios">
             <div className={classes.root}>
-                <AppBar style={{ backgroundColor: '#2f4f4f', boxShadow: 'none', position: 'relative', top: '15px', left: '-75px' }} position="static">
+                <AppBar style={{ backgroundColor: '#2f4f4f', boxShadow: 'none', position: 'relative', top: '15px', left: '-105px' }} position="static">
                     <Tabs indicatorColor='transparent' value={value} onChange={handleChange} aria-label="simple tabs example">
-                        <Tab style={{ backgroundColor: '#2f4f4f', boxShadow: 'none' }} label="Brasil" {...a11yProps(0)} />
-                        <Tab style={{ backgroundColor: '#2f4f4f', boxShadow: 'none' }} label="Favoritos" {...a11yProps(1)} />
-                        <Tab style={{ backgroundColor: '#2f4f4f', boxShadow: 'none' }} label="Rap/Funk" {...a11yProps(2)} />
-                        <Tab style={{ backgroundColor: '#2f4f4f', boxShadow: 'none' }} label="Samba/Pagode" {...a11yProps(3)} />
-                        <Tab style={{ backgroundColor: '#2f4f4f', boxShadow: 'none' }} label="Sertanejo" {...a11yProps(4)} />
+                        <Tab style={{fontSize: "12px", marginLeft: '-35px'}} label="Brasil" {...a11yProps(0)} />
+                        <Tab style={{fontSize: "12px"}} label="Favoritos" {...a11yProps(1)} />
+                        <Tab style={{fontSize: "12px"}} label="Rap/Funk" {...a11yProps(2)} />
+                        <Tab style={{fontSize: "12px"}} label="Samba/Pagode" {...a11yProps(3)} />
+                        <Tab style={{fontSize: "12px"}} label="Sertanejo" {...a11yProps(4)} />
+                        <Tab style={{fontSize: "12px"}} label="Estados Unidos" {...a11yProps(5)} />
                     </Tabs>
                 </AppBar>
-                <TabPanel style={{ backgroundColor: '#2f4f4f', boxShadow: 'none'}} value={value} index={0}>
+                <TabPanel value={value} index={0}>
                     <RadiosBrasil />
                 </TabPanel>
-                <TabPanel style={{ backgroundColor: '#2f4f4f', boxShadow: 'none' }} value={value} index={1}>
+                <TabPanel value={value} index={1}>
                     <MyRadios />
                 </TabPanel>
-                <TabPanel style={{ backgroundColor: '#2f4f4f', boxShadow: 'none' }} value={value} index={2}>
+                <TabPanel value={value} index={2}>
                     <RadiosRap />
                 </TabPanel>
-                <TabPanel style={{ backgroundColor: '#2f4f4f', boxShadow: 'none' }} value={value} index={3}>
+                <TabPanel value={value} index={3}>
                     <RadiosSamba />
                 </TabPanel>
-                <TabPanel style={{ backgroundColor: '#2f4f4f', boxShadow: 'none' }} value={value} index={4}>
+                <TabPanel value={value} index={4}>
                     <RadioSertanejo />
+                </TabPanel>
+                <TabPanel value={value} index={5}>
+                    <RadioUSA />
                 </TabPanel>
             </div>
         </div>

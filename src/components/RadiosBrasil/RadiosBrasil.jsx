@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react';
 import RadioBrowser from 'radio-browser';
 import RadiosCard from '../Common/RadiosCard/RadiosCard';
 import Paginate from '../Common/Pagination/Paginate';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import './RadiosBrasil.scss';
 
 const RadiosBrasil = () => {
     const [currentPage, setCurrentPage] = useState(3);
     const [radiosPerPage] = useState(9);
     const [radioStation, setRadioStation] = useState([]);
+    const [load, setLoad] = useState(false);
 
     useEffect(() => {
         function getMusics() {
@@ -16,9 +18,10 @@ const RadiosBrasil = () => {
                 searchterm: 'Brazil'
             };
 
+            setLoad(true);
             RadioBrowser.getStations((filters)).then((data) => {
                 setRadioStation(data);
-                console.log(data);
+                setLoad(false);
             }).catch(error => console.log(error));
         }
 
@@ -33,7 +36,7 @@ const RadiosBrasil = () => {
 
     return (<>
         <div className="radios">
-            <RadiosCard radios={currentRadios} icone={'brasil'} />
+        {load ? <CircularProgress color={"#ffffff"} size={'80px'} style={{position: "absolute", top: "200px", left: "275px"}}/> : <RadiosCard radios={currentRadios} icone={'brasil'}/>}
         </div>
 
         <div className="pagination">
