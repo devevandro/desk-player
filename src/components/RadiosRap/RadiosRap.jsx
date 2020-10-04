@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import RadiosCard from '../Common/RadiosCard/RadiosCard';
-import Paginate from '../Common/Pagination/Paginate';
+import RadiosDatas from '../Common/RadiosDatas/RadiosDatas.jsx';
 import './RadiosRap.scss';
 
 const RadiosRap = () => {
-    const [currentPage, setCurrentPage] = useState(2);
-    const [radiosPerPage] = useState(9);
     const [radio, setRadio] = useState([]);
 
     //minhas rádios preferidas
@@ -89,7 +86,7 @@ const RadiosRap = () => {
                 },
 
                 {
-                    "name": "Rádio Funk Melody - Funk Old School",
+                    "name": "Rádio Funk Melody",
                     "url_resolved": "https://sonic1.transmissaodigital.com:7016/live"
                 },
 
@@ -124,20 +121,8 @@ const RadiosRap = () => {
         getRadiosLocale();
     }, []);
 
-    /*pegando as radioss atuais*/
-    const indexOfLastRadio = currentPage * radiosPerPage;
-    const indexOfFirstRadio = indexOfLastRadio - radiosPerPage;
-    const currentRadios = radio.slice(indexOfFirstRadio, indexOfLastRadio);
-    const howManyPages = Math.ceil(radio.length / radiosPerPage);
-
     return (<>
-        <div className="radios">
-            <RadiosCard radios={currentRadios} icone={'rap'} />
-        </div>
-
-        <div className="pagination">
-            <Paginate pages={howManyPages} setCurrentPage={setCurrentPage} />
-        </div>
+        <RadiosDatas radio={radio} icone={'rap'} />
     </>);
 };
 

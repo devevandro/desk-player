@@ -64,7 +64,7 @@ const Radio = () => {
     return (<>
         <div id="radios">
             <div className={classes.root}>
-                <AppBar style={{ backgroundColor: '#2f4f4f', boxShadow: 'none', position: 'relative', top: '15px', left: '-105px' }} position="static">
+                <AppBar style={{ backgroundColor: '#123', boxShadow: 'none', position: 'relative', top: '15px', left: '-105px' }} position="static">
                     <Tabs indicatorColor='transparent' value={value} onChange={handleChange} aria-label="simple tabs example">
                         <Tab style={{fontSize: "12px", marginLeft: '-35px'}} label="Brasil" {...a11yProps(0)} />
                         <Tab style={{fontSize: "12px"}} label="Favoritos" {...a11yProps(1)} />

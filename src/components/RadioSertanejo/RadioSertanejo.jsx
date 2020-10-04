@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import RadiosCard from '../Common/RadiosCard/RadiosCard';
-import Paginate from '../Common/Pagination/Paginate';
+import RadiosDatas from '../Common/RadiosDatas/RadiosDatas.jsx';
 import './RadioSertanejo.scss';
 
 const RadioSertanejo = () => {
-    const [currentPage, setCurrentPage] = useState(1);
-    const [radiosPerPage] = useState(9);
     const [radio, setRadio] = useState([]);
 
     //minhas rádios preferidas
@@ -110,21 +107,8 @@ const RadioSertanejo = () => {
         getRadiosLocale();
     }, []);
 
-    /*pegando as radioss atuais*/
-    const indexOfLastRadio = currentPage * radiosPerPage;
-    const indexOfFirstRadio = indexOfLastRadio - radiosPerPage;
-    const currentRadios = radio.slice(indexOfFirstRadio, indexOfLastRadio);
-    const howManyPages = Math.ceil(radio.length / radiosPerPage);
-
     return (<>
-        <div className="radios">
-            <RadiosCard radios={currentRadios} icone={'sertanejo'} />
-        </div>
-
-        <div className="pagination">
-            <Paginate pages={howManyPages} setCurrentPage={setCurrentPage} />
-            {/* <Pagination currentPage={currentPage} radiosPerPage={radiosPerPage} totalRadios={radio.length} paginate={paginate} /> */}
-        </div>
+        <RadiosDatas radio={radio} icone={'sertanejo'} />
     </>);
 };
 
