@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createRef } from 'react';
+import React, { useState, useEffect} from 'react';
 import PlayRadio from '../PlayRadio/PlayRadio.jsx'; /* 
 import SearchIcon from '@material-ui/icons/Search'; */
 import RadioIcon from '@material-ui/icons/Radio';
@@ -9,8 +9,6 @@ const RadioMusicCard = ({ radios, icone }) => {
     const [filteredRadios, setFilteredRadios] = useState([]);
     const [name, setName] = useState('');
     const [getUrl, setGetUrl] = useState('');
-    const testeRef = createRef();
-    console.log('ref: ', testeRef);
 
     useEffect(() => {
         setFilteredRadios(

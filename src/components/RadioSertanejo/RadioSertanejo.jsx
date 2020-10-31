@@ -31,11 +31,6 @@ const RadioSertanejo = () => {
                 },
 
                 {
-                    name: "Hunter FM - Sertanejo",
-                    url_resolved: "https://live.hunter.fm/sertanejo_high?origin=/country"
-                },
-
-                {
                     name: "Vagalume FM - Sertanejo",
                     url_resolved: "https://stream.vagalume.fm/hls/14619606471054026608/aac.m3u8"
                 },
@@ -99,7 +94,12 @@ const RadioSertanejo = () => {
                 {
                     "name": "Sertanejo Bom Demais",
                     "url_resolved": "http://cast4.hoost.com.br:8673/stream?1598758513277"
-                }];
+                },
+
+                {
+                    name: "Hunter FM - Sertanejo",
+                    url_resolved: "https://live.hunter.fm/sertanejo_high?origin=/country"
+                },];
 
             setRadio(radios);
         };

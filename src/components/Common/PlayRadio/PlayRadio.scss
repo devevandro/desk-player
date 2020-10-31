@@ -1,17 +1,56 @@
 #container {
-    .players {
-        position: absolute; 
-        outline: 0;
-        width: 190px;
-        height: 4vh;
-        bottom: -345px;
-        left: 276px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: -40px;
+    left: -25px;
+
+    .play {
+        position: fixed;
+        top: 600px;
+        left: 555px;
+        cursor: pointer;
     }
 
+    .volume {
+        position: fixed;
+        top: 600px;
+        right: 425px;
+        cursor: pointer;
+    }
+
+    .minus {
+        position: fixed;
+        top: 600px;
+        right: 457px;
+        cursor: pointer;
+    }
+
+    .plus {
+        position: fixed;
+        top: 600px;
+        right: 410px;
+        cursor: pointer;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .disabled {
+        opacity: .9;
+        cursor: not-allowed;
+    }
+}
+
+.show {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: -100px;
+    left: -194px;
+
     p {
-        position: relative;
-        font-size: 12px;
-        top: -24px;
-        left: -30px;
+        font-size: 35px;
     }
 }

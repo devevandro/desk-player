@@ -11,7 +11,7 @@ const MyRadios = () => {
             const radios = [
                 {
                     name: "105 FM",
-                    url_resolved: "https://digitalpay1.app:9019/live"
+                    url_resolved: "http://148.72.158.239:8010/live?1604105612381"
                 },
 
                 {
@@ -27,11 +27,6 @@ const MyRadios = () => {
                 {
                     name: "Integração FM",
                     url_resolved: "https://ssl.stm-ip.com/proxy/7816/;?1598757855865"
-                },
-
-                {
-                    name: "Vale do Sol FM",
-                    url_resolved: "https://cantador.app:9097/live?1598368048631"
                 },
 
                 {
@@ -86,7 +81,7 @@ const MyRadios = () => {
 
                 {
                     name: "FM o Dia - Rio de Janeiro",
-                    url_resolved: "http://158.69.25.64:9735/live"
+                    url_resolved: "http://streaming.livecenterhost.com:8054/stream?type=http&nocache=45"
                 },
 
                 {
@@ -112,7 +107,12 @@ const MyRadios = () => {
                 {
                     name: "Rádio Rap Nacional",
                     url_resolved: "http://node-17.zeno.fm/spzru5axm8quv?rj-ttl=5&rj-tok=AAABc_J2iqAAsB7n7uHuQJG-PA"
-                }];
+                },
+
+                {
+                    name: "Vale do Sol FM",
+                    url_resolved: "https://cantador.app:9097/live?1598368048631"
+                },];
 
             setRadio(radios);
         };

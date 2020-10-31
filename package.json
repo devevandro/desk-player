@@ -28,6 +28,8 @@
     "react-dom": "^16.13.1",
     "react-dropzone": "^11.0.3",
     "react-hls-player": "^1.1.0",
+    "react-howler": "^4.0.0",
+    "react-player": "^2.6.2",
     "react-query": "^2.15.4",
     "react-scripts": "3.4.1",
     "react-swipeable-views": "^0.13.9"

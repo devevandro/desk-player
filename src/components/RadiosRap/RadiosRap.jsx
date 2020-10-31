@@ -31,11 +31,6 @@ const RadiosRap = () => {
                 },
 
                 {
-                    name: "Rádio CBMN",
-                    url_resolved: "https://servidor40-5.brlogic.com:8832/live"
-                },
-
-                {
                     name: "Rap é Compromisso",
                     url_resolved: "https://node-15.zeno.fm/kpa9wqn67vzuv?1596416841654=&rj-tok=AAABc7Hk-ykAbekSirhM4lvs7w&rj-ttl=5"
                 },
@@ -113,7 +108,12 @@ const RadiosRap = () => {
                 {
                     "name": "Play Funk",
                     "url_resolved": "https://ssl1.transmissaodigital.com:20079/live"
-                }];
+                },
+
+                {
+                    name: "Rádio CBMN",
+                    url_resolved: "https://servidor40-5.brlogic.com:8832/live"
+                },];
 
             setRadio(radios);
         };

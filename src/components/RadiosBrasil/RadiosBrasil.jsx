@@ -25,8 +25,6 @@ const RadiosBrasil = () => {
         getMusics();
     }, []);
 
-    console.log('camisa: ', radioStation);
-
     return (<>
         {load ? <> <p className="loading">Carregando.....</p> <CircularProgress color={"#ffffff"} size={'80px'} style={{ position: "absolute", top: "250px", left: "300px" }} /> </> : <RadiosData radio={radioStation} icone={'brasil'} />}
     </>);

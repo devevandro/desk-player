@@ -30,11 +30,6 @@ const RadiosSamba = () => {
                 },
 
                 {
-                    name: "Batucada",
-                    url_resolved: "https://node-27.zeno.fm/7sdtm8c8y5quv?rj-ttl=5&rj-tok=AAABdDwRc6QAHbEczAt3Al8ETg"
-                },
-
-                {
                     name: "Brisa de Samba",
                     url_resolved: "https://node-01.zeno.fm/08pzyh88azzuv?rj-ttl=5&rj-tok=AAABdDwSfxkAZFDKrHUkmoglcg"
                 },
@@ -52,7 +47,12 @@ const RadiosSamba = () => {
                 {
                     "name": "Rádio Top Samba",
                     "url_resolved": "http://hts06.kshost.com.br:8762/;"
-                }];
+                },
+
+                {
+                    name: "Batucada",
+                    url_resolved: "https://node-27.zeno.fm/7sdtm8c8y5quv?rj-ttl=5&rj-tok=AAABdDwRc6QAHbEczAt3Al8ETg"
+                },];
 
             setRadio(radios);
         };
