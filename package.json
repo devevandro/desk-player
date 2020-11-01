@@ -4,6 +4,7 @@
   "description": "Desktop player",
   "author": "Evandro Carvalho Ferreira",
   "build": {
+    "name": "DeskSounds",
     "appId": "desk.sounds",
     "win": {
       "icon": "build/assets/icons/auto-falante.png"
