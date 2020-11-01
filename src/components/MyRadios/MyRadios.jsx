@@ -10,12 +10,16 @@ const MyRadios = () => {
         function getRadiosLocale() {
             const radios = [
                 {
-                    name: "105 FM",
+                    name: "105 FM - SP",
                     url_resolved: "http://148.72.158.239:8010/live?1604105612381"
+                },
+                {
+                    name: "Radio Mania - RJ",
+                    url_resolved: "http://shout35.crossradio.com.br:8086/1/;"
                 },
 
                 {
-                    name: "Rádio Graúna FM",
+                    name: "Rádio Graúna FM - Cornélio Procópio",
                     url_resolved: "https://ice.fabricahost.com.br/graunafm"
                 },
 
@@ -25,7 +29,7 @@ const MyRadios = () => {
                 },
 
                 {
-                    name: "Integração FM",
+                    name: "Integração FM - Cândido Mota",
                     url_resolved: "https://ssl.stm-ip.com/proxy/7816/;?1598757855865"
                 },
 
@@ -35,42 +39,37 @@ const MyRadios = () => {
                 },
 
                 {
-                    name: "Rap e Compromisso",
-                    url_resolved: "https://node-15.zeno.fm/kpa9wqn67vzuv?1596416841654=&rj-tok=AAABc7Hk-ykAbekSirhM4lvs7w&rj-ttl=5"
-                },
-
-                {
-                    name: "Radio Yara FM",
+                    name: "Radio Yara FM - Bandeirantes",
                     url_resolved: "https://ssl.xcast.com.br:10528/;?1596576359222"
                 },
 
                 {
-                    "name": "Radio FM 104",
+                    "name": "Radio FM 104 - Cornélio Procópio",
                     "url_resolved": "https://player.transmissaodigital.com/proxy/7208"
                 },
 
                 {
-                    "name": "Radio T FM",
+                    "name": "Radio T FM - Andirá",
                     "url_resolved": "https://live.paineldj.com.br/proxy/tandira?mp=/live"
                 },
 
                 {
-                    "name": "Radio RC FM",
+                    "name": "Radio RC FM - Cornélio Procópio",
                     "url_resolved": "http://s01.transmissaodigital.com:7434/stream?1597161337451"
                 },
 
                 {
-                    "name": "Radio Igapó FM",
+                    "name": "Radio Igapó FM - Londrina",
                     "url_resolved": "http://r13.ciclano.io:8882/live?1596577327840"
                 },
 
                 {
-                    "name": "Vale do Sol FM",
+                    "name": "Vale do Sol FM - Santo Antonio da Platina",
                     "url_resolved": "http://paineldj.com.br:11738/;"
                 },
 
                 {
-                    name: "Rainha da Paz FM",
+                    name: "Rainha da Paz FM - Cornélio Procópio",
                     url_resolved: "http://s02.transmissaodigital.com:7074/stream?1596641841576"
                 },
 
@@ -82,36 +81,6 @@ const MyRadios = () => {
                 {
                     name: "FM o Dia - Rio de Janeiro",
                     url_resolved: "http://streaming.livecenterhost.com:8054/stream?type=http&nocache=45"
-                },
-
-                {
-                    name: "Rádio Escuta - Assis",
-                    url_resolved: "http://s69.tecinfinity.com.br:7864/stream?1598542440840"
-                },
-
-                {
-                    name: "Rádio Pajuçara - Maceió",
-                    url_resolved: "https://slrp.sambavideos.sambatech.com/radio/pajucara4_7fbed8aac5d5d915877e6ec61e3cf0db/livestream/chunklist.m3u8"
-                },
-
-                {
-                    name: "Rádio Nova 105 - Amapá",
-                    url_resolved: "http://sv12.hdradios.net:7070/live"
-                },
-
-                {
-                    name: "Rádio Ocidental FM - Acre",
-                    url_resolved: "http://stream.helplay.com.br:8003/stream"
-                },
-
-                {
-                    name: "Rádio Rap Nacional",
-                    url_resolved: "http://node-17.zeno.fm/spzru5axm8quv?rj-ttl=5&rj-tok=AAABc_J2iqAAsB7n7uHuQJG-PA"
-                },
-
-                {
-                    name: "Vale do Sol FM",
-                    url_resolved: "https://cantador.app:9097/live?1598368048631"
                 },];
 
             setRadio(radios);

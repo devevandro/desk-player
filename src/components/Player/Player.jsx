@@ -3,8 +3,8 @@ import Dropzone from 'react-dropzone';
 import * as mm from 'music-metadata';
 import * as musicMetadata from 'music-metadata-browser';
 import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
-import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';/* 
-import PauseCircleOutlineIcon from './node_modules/@material-ui/icons/PauseCircleOutline'; */
+import PlayArrowIcon from '@material-ui/icons/PlayArrow';
+import PauseIcon from '@material-ui/icons/Pause';
 import SkipNextIcon from '@material-ui/icons/SkipNext';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -13,30 +13,11 @@ import VolumeDown from '@material-ui/icons/VolumeDown';
 import VolumeUp from '@material-ui/icons/VolumeUp';
 import './Player.scss';
 
-//código para os icones de música
-const useStyles = makeStyles((theme) => ({
-    root: {
-        '& > svg': {
-            margin: theme.spacing(2),
-        },
-    },
-}));
-
-const useStylesVolume = makeStyles((theme) => ({
-    root: {
-        width: 200,
-        '& > svg': {
-            margin: theme.spacing(2)
-        },
-    },
-}));
-
 const Player = () => {
-    const classes = useStyles();
-    const classe = useStylesVolume();
     const [value, setValue] = useState(30);
     const [file, setFile] = useState([]);
     const [teste, setTeste] = useState([]);
+    const [name, setName] = useState('default');
 
     useEffect(() => {
         file.map(el => {
@@ -61,13 +42,21 @@ const Player = () => {
         return padZero(parseInt((t / (60)) % 60)) + ":" + padZero(parseInt((t) % 60));
     }
 
+    function handleClass() {
+        if(name === 'default') {
+            setName('disco-img');
+        }else {
+            setName('default');
+        }
+    }
+
     return (<>
         <div id="disco">
-            <img src="assets/icons/disc.png" alt="" />
+            <img src="assets/icons/disc.png" alt="" className={name} />
         </div>
 
         {<div id="musics">
-            <Dropzone multiple={true} accept={["audio/*"]} onDrop={(files) => { setFile(files) }}>
+            {/* <Dropzone multiple={true} accept={["audio/*"]} onDrop={(files) => { setFile(files) }}>
                 {({ getRootProps, getInputProps }) => (
                     <div className="container">
                         <div
@@ -81,7 +70,7 @@ const Player = () => {
                         </div>
                     </div>
                 )}
-            </Dropzone>
+            </Dropzone> */}
 
             {
                 file.map((el, i) => {
@@ -102,27 +91,27 @@ const Player = () => {
             <input type="range" name="" id="" />
         </div>
 
-        <div id="music-controls">
-            <div className={classes.root}>
-                <button><SkipPreviousIcon style={{ fontSize: 60, color: '#ffffff' }} /></button>
-                <button><PlayCircleOutlineIcon style={{ fontSize: 60, color: '#ffffff' }} /></button>
-                <button><SkipNextIcon style={{ fontSize: 60, color: '#ffffff' }} /></button>
+        <div id="controls">
+            <div id="music-controls">
+                <SkipPreviousIcon style={{ fontSize: 60, color: '#ffffff' }} />
+                <PlayArrowIcon onClick={() => handleClass()} style={{ fontSize: 60, color: '#ffffff' }} />
+                <SkipNextIcon style={{ fontSize: 60, color: '#ffffff' }} />
             </div>
-        </div>
 
-        <div id="volume">
-            <div className={classe.root}>
-                <Grid container spacing={2}>
-                    <Grid item>
-                        <VolumeDown style={{ color: '#ffffff' }} />
+            <div id="volume">
+                <div>
+                    <Grid container spacing={2}>
+                        <Grid item>
+                            <VolumeDown style={{ color: '#ffffff' }} />
+                        </Grid>
+                        <Grid item xs>
+                            <Slider value={value} onChange={handleChange} aria-labelledby="continuous-slider" style={{ color: '#ffffff' }} />
+                        </Grid>
+                        <Grid item>
+                            <VolumeUp style={{ color: '#ffffff' }} />
+                        </Grid>
                     </Grid>
-                    <Grid item xs>
-                        <Slider value={value} onChange={handleChange} aria-labelledby="continuous-slider" style={{ color: '#ffffff' }} />
-                    </Grid>
-                    <Grid item>
-                        <VolumeUp style={{ color: '#ffffff' }} />
-                    </Grid>
-                </Grid>
+                </div>
             </div>
         </div>
     </>);

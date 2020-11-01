@@ -16,21 +16,6 @@ const RadiosRap = () => {
                 },
 
                 {
-                    name: "Vagalume FM - Rap e Hip Hop",
-                    url_resolved: "https://stream.vagalume.fm/hls/1470155107337444/aac.m3u8"
-                },
-
-                {
-                    name: "Rap Life Rádio",
-                    url_resolved: "https://s28.maxcast.com.br:8196/live"
-                },
-
-                {
-                    name: "Rádio Balada Rap",
-                    url_resolved: "http://srv4.ipstm.net:8228/;"
-                },
-
-                {
                     name: "Rap é Compromisso",
                     url_resolved: "https://node-15.zeno.fm/kpa9wqn67vzuv?1596416841654=&rj-tok=AAABc7Hk-ykAbekSirhM4lvs7w&rj-ttl=5"
                 },
@@ -38,11 +23,6 @@ const RadiosRap = () => {
                 {
                     name: "Rádio Geração Hip Hop",
                     url_resolved: "http://srv3.geracaoradios.com:8030/radio.mp3/;"
-                },
-
-                {
-                    "name": "Rádio Studio Souto - Rap Nacional",
-                    "url_resolved": "http://192.99.150.31:8377/stream"
                 },
 
                 {
@@ -88,31 +68,6 @@ const RadiosRap = () => {
                 {
                     "name": "Lançamentos Funk e Batidão",
                     "url_resolved": "https://node-03.zeno.fm/wwdgk21qb2zuv?rj-ttl=5&rj-tok=AAABdDwvdb8A3XaYPn8gqQkaqA"
-                },
-
-                {
-                    "name": "Rádio Disco Funk",
-                    "url_resolved": "http://streaming12.hstbr.net:8084/live"
-                },
-
-                {
-                    "name": "Rádio Brega Funk",
-                    "url_resolved": "http://stm11.srvstm.com:8632/;stream.nsv"
-                },
-
-                {
-                    "name": "Music FM Funk",
-                    "url_resolved": "https://node-02.zeno.fm/ae5ux0ubqeruv?rj-ttl=5&rj-tok=AAABdDwzfBUAbeu1vqb1lprIVA"
-                },
-
-                {
-                    "name": "Play Funk",
-                    "url_resolved": "https://ssl1.transmissaodigital.com:20079/live"
-                },
-
-                {
-                    name: "Rádio CBMN",
-                    url_resolved: "https://servidor40-5.brlogic.com:8832/live"
                 },];
 
             setRadio(radios);
