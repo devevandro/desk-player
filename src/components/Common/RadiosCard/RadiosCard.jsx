@@ -22,14 +22,14 @@ const RadioMusicCard = ({ radios, icone }) => {
         <div id="stations">
             {filteredRadios.map((el, index) => {
                     return <>
-                        <div key={index} className={name === el.name ? 'radios-description-opacity' : 'radios-description'} onClick={() => {setGetUrl(el.url_resolved); setName(el.name)}}>
+                        <div key={index} className={name === el.name ? 'radios-description-opacity' : 'radios-description'} onClick={() => {setGetUrl(el.url); setName(el.name)}}>
                             <div className={'radios-cards'}>
-                                {(icone === 'rap') && <img src={'assets/icons/rap.png'} />}
+                                {(icone === 'rap') && <img src={el.img} />}
                                 {(icone === 'samba') && <img src={'assets/icons/cavaquinho.png'} />}
                                 {(icone === 'brasil') && <img src={'assets/icons/brasil.png'} />}
                                 {(icone === 'sertanejo') && <img src={'assets/icons/sertanejo.png'} />}
                                 {(icone === 'usa') && <img src={'assets/icons/usa.png'} />}
-                                {(icone === 'diversos') && <img src={'assets/icons/auto.png'} />}
+                                {(icone === 'diversos') && <img src={el.img} />}
                                 <p>{el.name}</p>
                             </div>
                         </div>

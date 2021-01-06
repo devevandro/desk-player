@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import RadiosDatas from '../Common/RadiosDatas/RadiosDatas.jsx';
 import './MyRadios.scss';
+import api from 'api-bada';
 
 const MyRadios = () => {
     const [radio, setRadio] = useState([]);
@@ -90,7 +91,7 @@ const MyRadios = () => {
     }, []);
 
     return <>
-        <RadiosDatas radio={radio} icone={'diversos'} />
+        <RadiosDatas radio={api.parana} icone={'diversos'} />
     </>
 
 };
