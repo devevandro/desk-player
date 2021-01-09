@@ -1,4 +1,5 @@
 This project was created by Electron JS and React JS.
+This is the first version.
 
 ## Available Scripts
 In the project directory, you can run:
